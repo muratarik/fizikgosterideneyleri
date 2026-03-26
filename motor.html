@@ -3,95 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alüminyumun Paramanyetikliği</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Motor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
+
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color: white;
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#1e3a8a,#0f172a,#312e81,#020617);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
 }
 
 nav {
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  text-align: center;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:rgba(255,255,255,0.05);
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
 }
 
-.section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+nav a:hover { opacity:1; }
+
+.breadcrumb {
+  max-width:1000px;
+  margin:25px auto 0;
+  padding:0 20px;
+  opacity:0.7;
 }
 
-h1 {
-  text-align: center;
+.hero {
+  text-align:center;
+  padding:40px;
 }
 
-.box {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.hero h1 {
+  font-size:42px;
+  font-weight:800;
+  background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.06);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover {
+  border:1px solid #a855f7;
+  box-shadow:0 0 25px rgba(168,85,247,0.4);
+}
+
+.grid-2 {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+@media(max-width:768px){
+  .grid-2 { grid-template-columns:1fr; }
+}
+
+img {
+  max-width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+h3 { color:#a5b4fc; }
+h4 { color:#a5b4fc; }
+
+p,li {
+  line-height:1.6;
+  opacity:0.9;
+}
+
+.footer {
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+}
+
 </style>
 </head>
+
 <body>
 
 <nav>
 <a href="index.html">Ana Sayfa</a>
-<a href="elektrik.html">Elektrik ve Manyetizma</a>
+<a href="elektrik.html">Elektrik & Manyetizma</a>
 </nav>
 
-<div class="section">
-
-<h1>Alüminyumun Paramanyetikliği</h1>
-
-<div class="box">
-<h3>Deneyin Amacı</h3>
-<p>Alüminyumun paramanyetik özelliğini göstermek.</p>
+<div class="breadcrumb">
+Kategoriler / Elektrik ve Manyetizma / Motor
 </div>
 
-<div class="box">
-<h3>Gerekli Malzemeler</h3>
-<ul>
-<li>Alüminyum tepsi</li>
-<li>Neodmiyum mıknatıs</li>
-</ul>
+<div class="hero">
+<h1>Motor</h1>
 </div>
 
-<div class="box">
-<h3>Deneyin Yapılışı</h3>
+<div class="container">
+
+<div class="card">
+<h3>🎯 Deneyin Amacı</h3>
 <p>
-Alüminyum bir tepsi alınır. Neodmiyum mıknatıs tepsi üzerine belirli bir mesafeden bırakılır.
-Mıknatıs tepsiye düz bir şekilde düşer. Dikkatli gözlemlendiğinde tepsinin mıknatısı hafifçe çektiği görülür.
-Alüminyum paramanyetik olduğu için manyetik alan etkisi altında mıknatısı zayıf da olsa kendine çeker.
+Motorun çalışma ilkesini ve manyetik alan içinde akım geçen iletkene etki eden kuvveti anlamak.
 </p>
 </div>
 
-<div class="box">
-<h3>Deneyin Fiziği</h3>
+<div class="grid-2">
 
-<p><strong>Manyetik maddeler üç grupta incelenir:</strong></p>
+<div class="card">
+<h3>🧰 Gerekli Malzemeler</h3>
+<ul>
+<li>1.5 V veya 9 V pil</li>
+<li>Yalıtılmış bakır tel</li>
+<li>2 adet çengelli iğne</li>
+<li>Mıknatıs</li>
+</ul>
+<img src="images/motor-malzemeler.jpg">
+</div>
 
-<p><strong>Ferromanyetik Maddeler:</strong><br>
-Demir, nikel, kobalt gibi maddeler kalıcı manyetik momente sahiptir ve güçlü şekilde mıknatıslanabilir.</p>
+<div class="card">
+<h3>🧪 Deneyin Yapılışı</h3>
 
-<p><strong>Paramanyetik Maddeler:</strong><br>
-Alüminyum gibi maddeler dış manyetik alan altında zayıf şekilde mıknatıslanır. Alan kaldırıldığında mıknatıslanma kaybolur.</p>
+<p>
+İlk olarak bobin hazırlanır.
+</p>
+<img src="images/motor-bobin-yapimi.jpg">
 
-<p><strong>Diamanyetik Maddeler:</strong><br>
-Bakır, altın, gümüş gibi maddeler manyetik alana zıt tepki verir ve mıknatıs tarafından zayıf şekilde itilir.</p>
+<p>
+Bobinin uçlarından 3-4 cm tel bırakılır ve yalıtımı soyulur.
+</p>
+<img src="images/motor-bobin.jpg">
+
+<p>
+Bobin ilmeklere yerleştirilir ve altına mıknatıs konur.
+</p>
+<img src="images/motor-deney.jpg">
+
+<p>
+Sistem doğru kurulduğunda bobin dönmeye başlar.
+</p>
 
 </div>
 
+</div>
+
+<div class="card">
+
+<h3>🧠 Deneyin Fiziği</h3>
+
+<p>
+Bobinden akım geçtiği zaman sağ el kuralına göre bobin etrafında manyetik alan oluşur. 
+Bu nedenle bobin bir mıknatıs gibi davranır.
+</p>
+
+<img src="images/motor-manyetik-alan.jpg">
+
+<p>
+Mıknatıslar arasında aynı kutuplar birbirini iter. Bu nedenle bobinin düzlemi 
+mıknatıs tarafından itilerek dönmeye başlar.
+</p>
+
+<p>
+Ancak gerçek elektrik motorlarında süreç daha kontrollüdür. Bobin yarım tur attığında 
+akım yönü değiştirilir. Böylece mıknatıs bobini her zaman aynı yönde iter ve motor 
+sürekli dönmeye devam eder.
+</p>
+
+<h4>Doğru Akım Motorunun Çalışması</h4>
+
+<p>
+Bir doğru akım motoru stator ve rotor olmak üzere iki ana bölümden oluşur. 
+Stator sabit manyetik alanı sağlar. Rotor ise dönen kısımdır.
+</p>
+
+<p>
+Rotor üzerindeki sargılardan akım geçtiğinde manyetik alan oluşur. 
+Bu alan statorun manyetik alanı ile etkileşir ve rotor üzerine bir kuvvet uygular.
+</p>
+
+<p>
+Bu kuvvet bobinin bir tarafını yukarı, diğer tarafını aşağı doğru iter ve 
+böylece bir tork oluşur.
+</p>
+
+<p>
+Motorun sürekli dönmesini sağlayan en önemli parça fırça-kollektör sistemidir. 
+Bu sistem bobin yarım tur attığında akım yönünü değiştirir.
+</p>
+
+<p>
+Böylece manyetik kuvvetin yönü değişmez ve bobin sürekli aynı yönde dönmeye devam eder.
+</p>
+
+<h4>Sağ El Kuralı</h4>
+
+<img src="images/sag-el-kurali.jpg">
+
+<ul>
+<li>Baş parmak → Kuvvet (F)</li>
+<li>İşaret parmağı → Manyetik alan (B)</li>
+<li>Orta parmak → Akım (I)</li>
+</ul>
+
+<p>
+Manyetik alan içinde akım geçen iletkene etki eden kuvvetin yönü sağ el kuralı ile belirlenir.
+</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+© Fizik Gösteri Deneyleri
 </div>
 
 </body>

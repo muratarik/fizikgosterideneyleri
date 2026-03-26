@@ -3,96 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alüminyumun Paramanyetikliği</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Pil Motoru</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color: white;
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#1e3a8a,#0f172a,#312e81,#020617);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
 }
-
-nav {
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  text-align: center;
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
+nav{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
 }
-
-.section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+nav a{
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
 }
-
-h1 {
-  text-align: center;
+nav a:hover{opacity:1;}
+.breadcrumb{
+  max-width:1000px;
+  margin:25px auto 0;
+  padding:0 20px;
+  font-size:14px;
+  opacity:0.7;
 }
-
-.box {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.breadcrumb a{
+  color:#a5b4fc;
+  text-decoration:none;
+}
+.hero{
+  text-align:center;
+  padding:40px 20px;
+}
+.hero h1{
+  font-size:42px;
+  font-weight:800;
+  background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+.card{
+  background:rgba(255,255,255,0.06);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s ease;
+}
+.card:hover{
+  border:1px solid #a855f7;
+  box-shadow:0 0 25px rgba(168,85,247,0.4);
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+@media(max-width:768px){
+  .grid-2{grid-template-columns:1fr;}
+}
+h3{color:#a5b4fc;}
+h4{color:#a5b4fc;}
+p,li{
+  line-height:1.6;
+  opacity:0.9;
+}
+img{
+  max-width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+.footer{
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
 }
 </style>
 </head>
+
 <body>
 
 <nav>
-<a href="index.html">Ana Sayfa</a>
-<a href="elektrik.html">Elektrik ve Manyetizma</a>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="elektrik.html">Elektrik & Manyetizma</a>
 </nav>
 
-<div class="section">
-
-<h1>Alüminyumun Paramanyetikliği</h1>
-
-<div class="box">
-<h3>Deneyin Amacı</h3>
-<p>Alüminyumun paramanyetik özelliğini göstermek.</p>
+<div class="breadcrumb">
+  <a href="index.html">Kategoriler</a> /
+  <a href="elektrik.html">Elektrik ve Manyetizma</a> /
+  Pil Motoru
 </div>
 
-<div class="box">
-<h3>Gerekli Malzemeler</h3>
-<ul>
-<li>Alüminyum tepsi</li>
-<li>Neodmiyum mıknatıs</li>
-</ul>
+<div class="hero">
+  <h1>Pil Motoru</h1>
 </div>
 
-<div class="box">
-<h3>Deneyin Yapılışı</h3>
-<p>
-Alüminyum bir tepsi alınır. Neodmiyum mıknatıs tepsi üzerine belirli bir mesafeden bırakılır.
-Mıknatıs tepsiye düz bir şekilde düşer. Dikkatli gözlemlendiğinde tepsinin mıknatısı hafifçe çektiği görülür.
-Alüminyum paramanyetik olduğu için manyetik alan etkisi altında mıknatısı zayıf da olsa kendine çeker.
+<div class="container">
+
+  <div class="card">
+    <h3>🎯 Deneyin Amacı</h3>
+    <p>Pil motoru deneyinde, akım geçen bir iletkenin manyetik alanla etkileşerek mekanik bir kuvvet (tork) oluşturduğunu gözlemleriz. Böylece elektrik enerjisinin dönen bir sistemde mekanik enerjiye dönüştüğünü gösteririz.</p>
+  </div>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <h3>🧰 Gerekli Malzemeler</h3>
+      <ul>
+        <li>1.5 V AA pil</li>
+        <li>Bakır tel (yalıtımlı)</li>
+        <li>Neodimyum disk mıknatıs</li>
+        <li>Maket bıçağı veya pense</li>
+      </ul>
+      <div style="text-align:center; margin-top:15px;">
+        <img src="images/pilmotoru-malzemeler.jpg" alt="Pil motoru deneyinde kullanılan malzemeler">
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🧪 Deneyin Yapılışı</h3>
+      <p>Bakır telden bir tel çerçevesi hazırlayın. Telin uçlarından birini pilin + ucuna, diğer ucunu pilin - ucuna temas edecek şekilde konumlandırın. Pilin + ucuna mıknatısı yapıştırın. Telin boşta kalan kısmı mıknatıs etrafında serbestçe dönebilecek şekilde yerleştirin.</p>
+      <p>Pil üzerinden akım akmaya başladığında, bakır tel mıknatıs etrafında dönmeye başlayacaktır.</p>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <h3>📷 Deney Kurulumu</h3>
+    <div style="text-align:center; margin-top:10px;">
+      <img src="images/pilmotoru-kurulum.jpg" alt="Pil motoru deney kurulumu">
+    </div>
+    <p style="margin-top:10px; opacity:0.8;">Basit bir elektrik motoru düzeni: Pil, mıknatıs ve bakır tel kullanılarak hazırlanmıştır.</p>
+  </div>
+
+  <div class="card">
+    <h3>🧠 Deneyin Fiziği</h3>
+    <p>Deneyde manyetik alan iletelik akımının etkileşimi gözlemlenir. Mıknatıs, alt yüzeyi ile yere dik bir manyetik alan oluşturur. Pili üst yüzeyi yukarı gelecek şekilde yerleştirdiğimizde, mıknatısın manyetik alanı yukarı doğru yönelir. Pilin + ucundan çıkan akım, bakır tel çerçevesi boyunca akarak devresini tamamlar. Bu akım, manyetik alana dik olduğu için tel üzerine bir Lorentz kuvveti etki eder ve tel çerçevesi üzerinde bir tork oluşur. Böylece tel çerçevesi dönmeye başlar.</p>
+    <p>Lorentz kuvveti aşağıdaki formüllerle ifade edilir:</p>
+    <div style="margin-top:15px; padding:15px; background:rgba(255,255,255,0.08); border-radius:12px; text-align:center; font-size:20px;">
+      <strong>Lorentz Kuvveti:</strong>
+      <p style="font-size:24px; margin:10px 0;">F = q v × B</p>
+      <p>Bir yük manyetik alan içinde hareket ederse Lorentz kuvvetine maruz kalır.</p>
+      <p style="font-size:22px; margin:10px 0;">F = I L × B</p>
+      <p>Akım geçen bir iletken için kuvvet büyüklüğü, akım (I), iletken uzunluğu (L) ve manyetik alan (B) ile ilişkilidir.</p>
+    </div>
+
+    <h4 style="margin-top:30px;">Pil Motorunun Çalışma Prensibi</h4>
+    <div style="text-align:center;">
+      <img src="images/teleetkiyenkuvvet.jpg" alt="Pil motoru çalışma prensibi">
+    </div>
+    <p style="margin-top:15px;">Yukarıdaki şemada bir homopolar motor düzeni gösterilmiştir. Pilin + ucundan çıkan akım (I), mıknatısın güçlü manyetik alanından etkilenerek bakır teli döndürür ve bir dönüş hareketi yaratır.</p>
+
+    <h4 style="margin-top:30px;">Sağ El Kuralı</h4>
+    <div style="text-align:center;">
+      <img src="images/sag-el-kurali.jpg" alt="Sağ el kuralı diyagramı">
+    </div>
+    <p style="margin-top:15px;">Manyetik alan içinde akım geçen bir iletkene etki eden kuvvetin yönünü bulmak için sağ el kuralı kullanılır. Baş parmak F (kuvvet), işaret parmağı B (manyetik alan) ve orta parmak I (akım) yönlerini gösterir.</p>
+    <ul style="margin-top:10px;">
+      <li>Baş parmak → Kuvvet (F)</li>
+      <li>İşaret parmağı → Manyetik Alan (B)</li>
+      <li>Orta parmak → Akım (I)</li>
+    </ul>
+  </div>
+
+<div class="card">
+<h3>🎬 Deney Videosu</h3>
+
+<a href="https://www.youtube.com/watch?v=k4gDVlCsMzg" target="_blank">
+<img src="https://img.youtube.com/vi/k4gDVlCsMzg/maxresdefault.jpg"
+style="width:100%; border-radius:15px;">
+</a>
+
+<p style="margin-top:10px;opacity:0.7;">
+Videoyu YouTube'da izlemek için görsele tıklayın.
 </p>
-</div>
-
-<div class="box">
-<h3>Deneyin Fiziği</h3>
-
-<p><strong>Manyetik maddeler üç grupta incelenir:</strong></p>
-
-<p><strong>Ferromanyetik Maddeler:</strong><br>
-Demir, nikel, kobalt gibi maddeler kalıcı manyetik momente sahiptir ve güçlü şekilde mıknatıslanabilir.</p>
-
-<p><strong>Paramanyetik Maddeler:</strong><br>
-Alüminyum gibi maddeler dış manyetik alan altında zayıf şekilde mıknatıslanır. Alan kaldırıldığında mıknatıslanma kaybolur.</p>
-
-<p><strong>Diamanyetik Maddeler:</strong><br>
-Bakır, altın, gümüş gibi maddeler manyetik alana zıt tepki verir ve mıknatıs tarafından zayıf şekilde itilir.</p>
 
 </div>
 
+<div class="footer">
+  © Fizik Gösteri Deneyleri
 </div>
 
 </body>
 </html>
+https://www.youtube.com/shorts/k4gDVlCsMzg
