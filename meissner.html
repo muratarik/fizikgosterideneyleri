@@ -3,95 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alüminyumun Paramanyetikliği</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Meissner Olayı</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color: white;
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#1e3a8a,#0f172a,#312e81,#020617);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
 }
 
 nav {
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  text-align: center;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:rgba(255,255,255,0.05);
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
 }
 
-.section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+nav a:hover { opacity:1; }
+
+.breadcrumb {
+  max-width:1000px;
+  margin:25px auto 0;
+  padding:0 20px;
+  opacity:0.7;
 }
 
-h1 {
-  text-align: center;
+.hero {
+  text-align:center;
+  padding:40px;
 }
 
-.box {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.hero h1 {
+  font-size:42px;
+  font-weight:800;
+  background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.06);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover {
+  border:1px solid #a855f7;
+  box-shadow:0 0 25px rgba(168,85,247,0.4);
+}
+
+img {
+  max-width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+h3 { color:#a5b4fc; }
+
+p {
+  line-height:1.7;
+  opacity:0.9;
+}
+
+.footer {
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
 }
 </style>
 </head>
+
 <body>
 
 <nav>
 <a href="index.html">Ana Sayfa</a>
-<a href="elektrik.html">Elektrik ve Manyetizma</a>
+<a href="elektrik.html">Elektrik & Manyetizma</a>
 </nav>
 
-<div class="section">
-
-<h1>Alüminyumun Paramanyetikliği</h1>
-
-<div class="box">
-<h3>Deneyin Amacı</h3>
-<p>Alüminyumun paramanyetik özelliğini göstermek.</p>
+<div class="breadcrumb">
+Kategoriler / Elektrik ve Manyetizma / Meissner Olayı
 </div>
 
-<div class="box">
-<h3>Gerekli Malzemeler</h3>
-<ul>
-<li>Alüminyum tepsi</li>
-<li>Neodmiyum mıknatıs</li>
-</ul>
+<div class="hero">
+<h1>Meissner Olayı</h1>
 </div>
 
-<div class="box">
-<h3>Deneyin Yapılışı</h3>
+<div class="container">
+
+<div class="card">
+<h3>🎯 Deneyin Amacı</h3>
 <p>
-Alüminyum bir tepsi alınır. Neodmiyum mıknatıs tepsi üzerine belirli bir mesafeden bırakılır.
-Mıknatıs tepsiye düz bir şekilde düşer. Dikkatli gözlemlendiğinde tepsinin mıknatısı hafifçe çektiği görülür.
-Alüminyum paramanyetik olduğu için manyetik alan etkisi altında mıknatısı zayıf da olsa kendine çeker.
+Meissner olayının anlaşılması ve süperiletkenlerin manyetik alan ile etkileşiminin gözlemlenmesi.
 </p>
 </div>
 
-<div class="box">
-<h3>Deneyin Fiziği</h3>
+<div class="card">
+<h3>🧰 Gerekli Malzemeler</h3>
+<p>
+Sıvı azot<br>
+Süperiletken<br>
+Küçük mıknatıs
+</p>
+</div>
 
-<p><strong>Manyetik maddeler üç grupta incelenir:</strong></p>
+<div class="card">
+<h3>🧪 Deneyin Yapılışı</h3>
 
-<p><strong>Ferromanyetik Maddeler:</strong><br>
-Demir, nikel, kobalt gibi maddeler kalıcı manyetik momente sahiptir ve güçlü şekilde mıknatıslanabilir.</p>
+<p>
+Süperiletken bir kap içerisine yerleştirilir ve üzerine sıvı azot dökülerek kritik sıcaklığın altına soğutulur.
+</p>
 
-<p><strong>Paramanyetik Maddeler:</strong><br>
-Alüminyum gibi maddeler dış manyetik alan altında zayıf şekilde mıknatıslanır. Alan kaldırıldığında mıknatıslanma kaybolur.</p>
+<p>
+Yeterince soğuduktan sonra mıknatıs dikkatlice süperiletkenin üzerine bırakılır.
+</p>
 
-<p><strong>Diamanyetik Maddeler:</strong><br>
-Bakır, altın, gümüş gibi maddeler manyetik alana zıt tepki verir ve mıknatıs tarafından zayıf şekilde itilir.</p>
+<p>
+Mıknatısın havada asılı kaldığı gözlemlenir.
+</p>
+
+<img src="images/meissner-deney.gif">
 
 </div>
 
+<div class="card">
+
+<h3>🧠 Deneyin Fiziği</h3>
+
+<h3>🔬 Süperiletken Nedir?</h3>
+
+<p>
+Belirli bir kritik sıcaklığın altına indirildiğinde elektriksel direnci tamamen ortadan kalkan maddelere süperiletken denir.
+</p>
+
+<p>
+Normal iletkenlerde elektronlar kristal yapı içinde ilerlerken saçılmaya uğrar ve enerji kaybı oluşur.
+Ancak süperiletkenlerde bu saçılma ortadan kalkar ve akım kayıpsız şekilde akabilir.
+</p>
+
+<p>
+Bu nedenle süperiletken içerisinde oluşan akım, dış bir etki olmadığı sürece teorik olarak sonsuza kadar devam edebilir.
+</p>
+
+<p>
+Süperiletkenler sadece sıfır dirençli değildir; aynı zamanda mükemmel diamanyetik özellik gösterirler.
+</p>
+
+<p>
+Yani dış manyetik alanı tamamen dışlarlar. Bu durum <strong>Meissner etkisi</strong> olarak adlandırılır.
+</p>
+
+<img src="images/meissner-alan.gif">
+
+<h3>⚙️ Süperiletken Çeşitleri</h3>
+
+<p>
+Süperiletkenler iki ana gruba ayrılır:
+</p>
+
+<p>
+<strong>Tip 1 Süperiletkenler:</strong> Genellikle saf metallerden oluşur. Kritik sıcaklığın altına inildiğinde ani bir geçişle süperiletken olurlar ve manyetik alanı tamamen dışlarlar.
+</p>
+
+<p>
+<strong>Tip 2 Süperiletkenler:</strong> Alaşımlar ve seramiklerden oluşur. Daha yüksek kritik sıcaklıklara sahiptirler ve "karma durum" (mixed state) üzerinden süperiletkenliğe geçerler.
+</p>
+
+<p>
+Bu maddeler belirli bir aralıkta hem manyetik alanı kısmen geçirir hem de süperiletkenlik gösterir.
+</p>
+
+<p>
+İlginç bir şekilde, çok iyi iletken olan bakır, gümüş ve altın süperiletken değildir.
+</p>
+
+<h3>🧩 BCS Teorisi</h3>
+
+<p>
+Süperiletkenliği açıklayan en önemli teorilerden biri BCS teorisidir.
+</p>
+
+<p>
+Bu teoriye göre elektronlar kristal örgü içinde hareket ederken örgüde titreşimler (fononlar) oluşturur.
+</p>
+
+<p>
+Bu fononlar, elektronlar arasında dolaylı bir çekim kuvveti oluşturarak onların çiftler halinde hareket etmesini sağlar.
+</p>
+
+<p>
+Bu elektron çiftlerine <strong>Cooper çiftleri</strong> denir.
+</p>
+
+<p>
+Cooper çiftleri, kristal yapı içerisinde saçılmadan hareket eder ve bu sayede elektriksel direnç ortadan kalkar.
+</p>
+
+<p>
+Bu mekanizma özellikle düşük sıcaklık süperiletkenlerini açıklamada oldukça başarılıdır.
+</p>
+
+<img src="images/bcs-teorisi.gif">
+
+</div>
+
+</div>
+
+<div class="footer">
+© Fizik Gösteri Deneyleri
 </div>
 
 </body>
