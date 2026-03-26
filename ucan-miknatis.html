@@ -90,20 +90,14 @@ nav a:hover { opacity:1; }
   .grid-2 { grid-template-columns:1fr; }
 }
 
-img {
-  max-width:100%;
-  border-radius:12px;
-  margin-top:10px;
-}
-
 h3 { color:#a5b4fc; }
 
-p,li {
+p {
   line-height:1.6;
   opacity:0.9;
 }
 
-/* 🔥 KARŞILAŞTIRMALI ANİMASYON */
+/* ANİMASYON */
 
 .tube-wrapper {
   display:flex;
@@ -138,12 +132,10 @@ p,li {
   transform:translateX(-50%);
 }
 
-/* hızlı düşüş */
 .fast {
   animation:fallFast 1s linear infinite;
 }
 
-/* yavaş düşüş */
 .slow {
   animation:fallSlow 3s ease-in infinite;
 }
@@ -156,6 +148,47 @@ p,li {
 @keyframes fallSlow {
   0% { top:-40px; }
   100% { top:200px; }
+}
+
+
+
+/* VIDEO */
+
+.video-box {
+  position:relative;
+  cursor:pointer;
+  margin-top:15px;
+}
+
+.video-box img {
+  width:100%;
+  border-radius:12px;
+}
+
+.play-button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:70px;
+  height:70px;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.play-button::after {
+  content:"";
+  border-style:solid;
+  border-width:12px 0 12px 18px;
+  border-color:transparent transparent transparent white;
+  margin-left:5px;
+}
+
+.video-box:hover .play-button {
+  background:red;
 }
 
 .footer {
@@ -184,15 +217,11 @@ Kategoriler / Elektrik ve Manyetizma / Uçan Mıknatıs
 
 <div class="container">
 
-<!-- AMAÇ -->
 <div class="card">
 <h3>🎯 Deneyin Amacı</h3>
-<p>
-Lenz yasasını ve elektromanyetik indüksiyonu gözlemlemek.
-</p>
+<p>Lenz yasasını ve elektromanyetik indüksiyonu gözlemlemek.</p>
 </div>
 
-<!-- MALZEMELER + YAPILIŞ -->
 <div class="grid-2">
 
 <div class="card">
@@ -201,88 +230,89 @@ Lenz yasasını ve elektromanyetik indüksiyonu gözlemlemek.
 <li>Bakır boru</li>
 <li>Neodimyum mıknatıs</li>
 </ul>
-
-<img src="images/ucan-miknatis-duzenek.jpg">
-
 </div>
 
 <div class="card">
 <h3>🧪 Deneyin Yapılışı</h3>
-
-<p>
-Bakır boru dik tutulur ve mıknatıs içine bırakılır.
-</p>
-
-<p>
-Mıknatısın yavaş düşmesi gözlemlenir.
-</p>
-
+<p>Bakır boru dik tutulur ve mıknatıs içine bırakılır.</p>
+<p>Mıknatısın yavaş düşmesi gözlemlenir.</p>
 </div>
 
 </div>
 
-<!-- FİZİK -->
 <div class="card">
-
 <h3>🧠 Deneyin Fiziği</h3>
 
 <p>
-Manyetik akı değiştiğinde iletken içinde akım oluşur. Bu olaya elektromanyetik indüksiyon denir.
+Manyetik akı değiştiğinde iletken içinde akım oluşur.
+Bu akımlar mıknatısın hareketine karşı koyar (Lenz yasası).
 </p>
 
-<img src="images/lenz-ilmek.jpg">
-
 <p>
-Oluşan akım, Lenz yasasına göre değişime karşı koyan bir manyetik alan oluşturur.
-</p>
-
-<img src="images/faraday-induksiyon.gif">
-
-<p>
-Bu nedenle mıknatısın hareketine zıt yönde bir kuvvet oluşur ve düşüş yavaşlar.
+Bu nedenle mıknatıs serbest düşüşten daha yavaş hareket eder.
 </p>
 
 </div>
 
-<!-- 🔥 KARŞILAŞTIRMALI ANİMASYON -->
 <div class="card">
 
 <h3>🎬 Karşılaştırmalı Animasyon</h3>
 
-<p>
-Solda serbest düşüş, sağda Lenz yasası etkisiyle yavaşlayan mıknatıs görülmektedir.
-</p>
-
 <div class="tube-wrapper">
 
-  <div class="tube-box">
-    <strong>Serbest Düşüş</strong>
-    <div class="tube">
-      <div class="magnet fast"></div>
-    </div>
-  </div>
+<div class="tube-box">
+<strong>Serbest Düşüş</strong>
+<div class="tube">
+<div class="magnet fast"></div>
+</div>
+</div>
 
-  <div class="tube-box">
-    <strong>Lenz Etkisi</strong>
-    <div class="tube">
-      <div class="magnet slow"></div>
-    </div>
-  </div>
+<div class="tube-box">
+<strong>Lenz Etkisi</strong>
+<div class="tube">
+
+<div class="magnet slow"></div>
+
+<div class="ring" style="top:40px;"></div>
+<div class="ring" style="top:100px;"></div>
+<div class="ring" style="top:160px;"></div>
+
+</div>
+</div>
 
 </div>
 
 <p style="margin-top:20px;">
-Sağ tarafta oluşan indüksiyon akımları mıknatısın hareketine karşı koyar
-ve düşüş süresini artırır.
+Halkalar, bakır boru içinde oluşan girdap akımlarını temsil eder.
 </p>
 
 </div>
 
+<!-- VIDEO -->
+
+<div class="card">
+
+<h3>🎬 Deney Videosu</h3>
+
+<a href="https://www.youtube.com/watch?v=N7tIi71-AjA" target="_blank">
+
+<div class="video-box">
+
+<img src="https://img.youtube.com/vi/N7tIi71-AjA/maxresdefault.jpg">
+
+<div class="play-button"></div>
+
 </div>
 
-<div class="footer">
-© Fizik Gösteri Deneyleri
+</a>
+
+<p style="margin-top:10px; opacity:0.7;">
+Videoyu izlemek için tıklayın (YouTube'da açılır)
+</p>
+
 </div>
+
+</script>
 
 </body>
 </html>
