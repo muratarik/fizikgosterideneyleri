@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İnsan Pili</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#1f2937,#0f172a,#111827,#020617);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+nav {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:rgba(255,255,255,0.05);
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+nav a:hover { opacity:1; }
+
+.breadcrumb {
+  max-width:1000px;
+  margin:20px auto;
+  padding:10px 20px;
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;
+}
+
+.hero {
+  text-align:center;
+  padding:40px;
+}
+
+.hero h1 {
+  font-size:42px;
+  background:linear-gradient(90deg,#f59e0b,#ef4444);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.06);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover {
+  border:1px solid #f59e0b;
+  box-shadow:0 0 25px rgba(245,158,11,0.4);
+}
+
+.grid-2 {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+@media(max-width:768px){
+  .grid-2 { grid-template-columns:1fr; }
+}
+
+h3 { color:#fbbf24; }
+
+p {
+  line-height:1.8;
+  opacity:0.9;
+}
+
+img {
+  width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+.video-box {
+  position:relative;
+  cursor:pointer;
+}
+
+.video-box img {
+  width:100%;
+}
+
+.play-button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:70px;
+  height:70px;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+}
+
+.play-button::after {
+  content:"";
+  border-style:solid;
+  border-width:12px 0 12px 18px;
+  border-color:transparent transparent transparent white;
+  position:absolute;
+  left:28px;
+  top:22px;
+}
+
+.footer {
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="elektrokimya.html">Elektrokimya</a>
+</nav>
+
+<div class="breadcrumb">
+<a href="index.html" style="color:#fbbf24;">Ana Sayfa</a> →
+<a href="elektrokimya.html" style="color:#fbbf24;">Elektrokimya</a> →
+İnsan Pili
+</div>
+
+<div class="hero">
+<h1>İnsan Pili</h1>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>🎯 Deneyin Amacı</h3>
+<p>İnsan vücudu üzerinden elektrik elde edilmesinin gösterilmesi.</p>
+</div>
+
+<div class="card">
+<h3>🧰 Gerekli Malzemeler</h3>
+<p>
+1. Bakır plaka<br>
+2. Çinko plaka<br>
+3. Mikro ampermetre
+</p>
+
+<img src="images/insanpili-malzemeler.jpg">
+</div>
+
+<div class="card">
+<h3>🧪 Deneyin Yapılışı</h3>
+
+<p>
+Ampermetrenin (+) ucu bakır plakaya, (-) ucu çinko plakaya bağlanır.
+</p>
+
+<p>
+Bir el çinko plakaya, diğer el bakır plakaya konur.
+</p>
+
+<p>
+Devre tamamlandığında ampermetrenin saptığı gözlemlenir.
+</p>
+
+<img src="images/insanpili-duzenek.jpg">
+<img src="images/insanpili-olcum.jpg">
+
+</div>
+
+<div class="card">
+
+<h3>🧠 Deneyin Fiziği</h3>
+
+<p>
+Bir elektrolit içine iki farklı metal yerleştirildiğinde basit bir pil oluşur. Bu düzeneğe volta pili denir.
+</p>
+
+<p>
+Çinko atomları çözeltide iyonlaşarak elektron verir ve negatif kutup olur. Bakır ise pozitif kutup görevi görür.
+</p>
+
+<p>
+Elektronlar çinkodan bakıra doğru hareket ederek elektrik akımı oluşturur.
+</p>
+
+<p>
+Bu deneyde elektrolit yerine insan vücudu kullanılır. Vücuttaki sıvılar ve iyonlar iletken gibi davranır.
+</p>
+
+<p>
+Bu nedenle devre insan üzerinden tamamlanır ve akım oluşur.
+</p>
+
+<p>
+Farklı metallerin elektronegatiflik farkı nedeniyle potansiyel fark oluşur ve ampermetre sapar.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚠️ Önemli Not</h3>
+
+<p>
+Oluşan akım çok küçüktür ve insan sağlığı açısından güvenlidir.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎬 Deney Videosu</h3>
+
+<a href="https://www.youtube.com/watch?v=3K9_fSnelrA" target="_blank">
+
+<div class="video-box">
+
+<img src="https://img.youtube.com/vi/3K9_fSnelrA/hqdefault.jpg">
+
+<div class="play-button"></div>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+© Fizik Gösteri Deneyleri
+</div>
+
+</body>
+</html>

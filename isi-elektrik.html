@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isıdan Elektrik Elde Edilmesi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#1f2937,#0f172a,#111827,#020617);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+nav {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:rgba(255,255,255,0.05);
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+nav a:hover { opacity:1; }
+
+.breadcrumb {
+  max-width:1000px;
+  margin:20px auto;
+  padding:0 20px;
+  opacity:0.7;
+}
+
+.breadcrumb a {
+  color:white;
+  text-decoration:none;
+}
+
+.hero {
+  text-align:center;
+  padding:40px;
+}
+
+.hero h1 {
+  font-size:42px;
+  background:linear-gradient(90deg,#22c1c3,#fdbb2d);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.06);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+h3 { color:#67e8f9; }
+
+p {
+  line-height:1.8;
+  opacity:0.9;
+}
+
+/* 🔥 RESİMLER YARI BOY */
+img {
+  width:50%;
+  display:block;
+  margin:20px auto;
+  border-radius:12px;
+}
+
+.footer {
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="mekanik.html">Mekanik</a>
+</nav>
+
+<div class="breadcrumb">
+<a href="index.html">Ana Sayfa</a> /
+<a href="mekanik.html">Mekanik</a> /
+<span>Isıdan Elektrik</span>
+</div>
+
+<div class="hero">
+<h1>⚡ Isıdan Elektrik Elde Edilmesi</h1>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>🎯 Deneyin Amacı</h3>
+<p>Isı farkı kullanarak elektrik enerjisi elde edilmesini gözlemlemek.</p>
+</div>
+
+<div class="card">
+<h3>🧰 Gerekli Malzemeler</h3>
+<p>
+• Termoelektrik çevirici (Peltier)<br>
+• Sıcak su<br>
+• Soğuk su
+</p>
+
+<img src="images/peltierduzenek.JPG">
+</div>
+
+<div class="card">
+<h3>🧪 Deneyin Yapılışı</h3>
+
+<p>
+Bir kaba sıcak su, diğerine soğuk su konur.
+</p>
+
+<p>
+Peltier modülünün uçları bu kaplara temas ettirilir.
+</p>
+
+<p>
+Sıcaklık farkı oluştuğunda elektrik üretimi gözlemlenir.
+</p>
+
+<img src="images/peltierdonen.JPG">
+
+</div>
+
+<div class="card">
+<h3>🧠 Deneyin Fiziği</h3>
+
+<p>
+Termoelektrik etki, sıcaklık farkının elektrik enerjisine dönüşmesidir.
+</p>
+
+<p>
+Bu olay Seebeck etkisi ile açıklanır.
+</p>
+
+<p>
+Sıcaklık farkı arttıkça oluşan gerilim de artar.
+</p>
+
+<p>
+Bu sistemler enerji üretimi ve soğutma teknolojilerinde kullanılır.
+</p>
+
+</div>
+
+<!-- 🎬 SHORTS VIDEO -->
+
+<div class="card">
+<h3>🎬 Deney Videosu</h3>
+
+<a href="https://www.youtube.com/shorts/CCiwJZ949u0" target="_blank">
+
+<img src="https://img.youtube.com/vi/CCiwJZ949u0/hqdefault.jpg">
+
+</a>
+
+<p style="margin-top:10px;opacity:0.7;">
+Videoyu YouTube'da izlemek için görsele tıklayın.
+</p>
+
+</div>
+
+<div class="footer">
+© Fizik Gösteri Deneyleri
+</div>
+
+</body>
+</html>

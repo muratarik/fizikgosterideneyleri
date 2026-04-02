@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ufalan Balon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#1f2937,#0f172a,#111827,#020617);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+nav {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:rgba(255,255,255,0.05);
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+nav a:hover { opacity:1; }
+
+.breadcrumb {
+  max-width:1000px;
+  margin:20px auto;
+  padding:10px 20px;
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;
+}
+
+.hero {
+  text-align:center;
+  padding:40px;
+}
+
+.hero h1 {
+  font-size:42px;
+  background:linear-gradient(90deg,#22c1c3,#fdbb2d);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.06);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover {
+  border:1px solid #22c1c3;
+  box-shadow:0 0 25px rgba(34,193,195,0.4);
+}
+
+h3 { color:#67e8f9; }
+
+p {
+  line-height:1.8;
+  opacity:0.9;
+}
+
+img {
+  width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+.footer {
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="cevre.html">Çevremizdeki Fizik</a>
+</nav>
+
+<div class="breadcrumb">
+<a href="index.html" style="color:#67e8f9;">Ana Sayfa</a> →
+<a href="cevre.html" style="color:#67e8f9;">Çevremizdeki Fizik</a> →
+Ufalan Balon
+</div>
+
+<div class="hero">
+<h1>🎈 Ufalan Balon</h1>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>🎯 Deneyin Amacı</h3>
+<p>Sıcaklığın gaz basıncı ve hacmi üzerindeki etkisini gözlemlemek.</p>
+</div>
+
+<div class="card">
+<h3>🧰 Gerekli Malzemeler</h3>
+<p>
+• Sıvı azot<br>
+• Balon
+</p>
+
+
+</div>
+
+<div class="card">
+<h3>🧪 Deneyin Yapılışı</h3>
+
+<p>
+Şişirilmiş balon yavaşça sıvı azot içerisine daldırılır.
+</p>
+
+<p>
+Balonun hacminin hızla küçüldüğü gözlemlenir.
+</p>
+
+<p>
+Balon tekrar çıkarıldığında eski hacmine geri döner.
+</p>
+
+</div>
+
+<div class="card">
+<h3>🧠 Deneyin Fiziği</h3>
+
+<p>
+Balon içindeki gaz miktarı sabittir ve balon esnek olduğu için iç basınç atmosfer basıncına eşittir.
+</p>
+
+<p>
+Sıcaklık düştüğünde gaz moleküllerinin kinetik enerjisi azalır.
+</p>
+
+<p>
+Bu nedenle moleküller daha az hareket eder ve kapladıkları hacim küçülür.
+</p>
+
+<p>
+Bu durum sıcaklık ile hacim arasındaki doğru orantıyı (Charles Yasası) gösterir.
+</p>
+
+</div>
+
+<div class="card">
+<h3>⚠️ Güvenlik</h3>
+
+<p>
+Sıvı azot çok düşük sıcaklığa sahiptir ve temas halinde ciddi donma (soğuk yanığı) oluşturabilir.
+</p>
+
+</div>
+
+<div class="card">
+<h3>🔗 Benzer Deneyler</h3>
+
+<ul>
+<li><a href="sivi-oksijen.html">Sıvı Oksijen</a></li>
+<li><a href="toz-cicek.html">Toz Olan Çiçek</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer">
+© Fizik Gösteri Deneyleri
+</div>
+
+</body>
+</html>
