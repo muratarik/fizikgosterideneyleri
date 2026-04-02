@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doppler Etkisi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+nav {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  background:rgba(0,0,0,0.4);
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+}
+
+.hero {
+  text-align:center;
+  padding:40px;
+}
+
+.hero h1 {
+  font-size:40px;
+  background:linear-gradient(90deg,#22c1c3,#fdbb2d);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+}
+
+h3 { color:#67e8f9; }
+
+p { line-height:1.8; }
+
+img {
+  max-width:100%;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.formula {
+  background:rgba(0,0,0,0.4);
+  padding:15px;
+  border-radius:10px;
+  margin-top:10px;
+  font-family:monospace;
+  font-size:18px;
+}
+
+.footer {
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="dalgalar.html">Dalgalar & Ses</a>
+</nav>
+
+<div class="hero">
+<h1>Doppler Etkisi</h1>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>🎯 Deneyin Amacı</h3>
+<p>
+Doppler olayının anlaşılması ve hareketli kaynak ile gözlemci durumunda frekans değişiminin incelenmesi.
+</p>
+</div>
+
+<div class="card">
+<h3>🧰 Gerekli Malzemeler</h3>
+<p>Buzzer<br>9V pil</p>
+<img src="images/doppler-buzzer.jpg">
+</div>
+
+<div class="card">
+<h3>🧪 Deneyin Yapılışı</h3>
+<p>
+Buzzer elde tutulur ve ileri-geri hareket ettirilir. Dinleyici, sesin yaklaşıldığında tizleştiğini, uzaklaşıldığında ise pesleştiğini gözlemler.
+</p>
+</div>
+
+<div class="card">
+
+<h3>🧠 Doppler Etkisi Nedir?</h3>
+
+<p>
+Doppler etkisi, bir dalga kaynağı ile gözlemci arasında bağıl hareket olduğunda gözlenen frekansın değişmesi olayıdır.
+</p>
+
+<p>
+Kaynak gözlemciye yaklaşırken dalga boyu küçülür ve frekans artar. Bu nedenle ses daha tiz duyulur.
+</p>
+
+<p>
+Kaynak uzaklaşırken dalga boyu büyür ve frekans azalır. Bu nedenle ses daha pes duyulur.
+</p>
+
+<img src="images/doppler-animasyon.gif">
+
+</div>
+
+<div class="card">
+
+<h3>📊 Genel Doppler Formülü</h3>
+
+<div class="formula">
+f' = f · ( (v ± vg) / (v ∓ vk) )
+</div>
+
+<p>
+f' → gözlenen frekans<br>
+f → kaynak frekansı<br>
+v → dalga hızı<br>
+vg → gözlemci hızı<br>
+vk → kaynak hızı
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📡 Durum 1: Gözlemci Hareketli</h3>
+
+<p>
+Kaynak sabit, gözlemci hareketliyse:
+</p>
+
+<div class="formula">
+f' = f · ( (v ± vg) / v )
+</div>
+
+<p>
+Gözlemci kaynağa yaklaşıyorsa (+), uzaklaşıyorsa (-) alınır.
+</p>
+
+<img src="images/doppler-yaklasma.gif">
+<img src="images/doppler-uzaklasma.gif">
+
+</div>
+
+<div class="card">
+
+<h3>📡 Durum 2: Kaynak Hareketli</h3>
+
+<p>
+Gözlemci sabit, kaynak hareketliyse:
+</p>
+
+<div class="formula">
+f' = f · ( v / (v ∓ vk) )
+</div>
+
+<p>
+Kaynak gözlemciye yaklaşıyorsa (-), uzaklaşıyorsa (+) alınır.
+</p>
+
+<img src="images/doppler-kaynak-yaklasma.gif">
+<img src="images/doppler-kaynak-uzaklasma.gif">
+
+</div>
+
+<div class="card">
+
+<h3>🌌 Uygulamalar</h3>
+
+<p>
+Doppler etkisi birçok alanda kullanılır:
+</p>
+
+<ul>
+<li>Ambulans ve siren sesleri</li>
+<li>Polis radarları (hız ölçümü)</li>
+<li>Astronomide kırmızıya kayma</li>
+<li>Tıpta Doppler ultrason</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>💥 Şok Dalgaları ve Mach Sayısı</h3>
+
+<p>
+Kaynak, ses hızına yaklaştığında dalgalar üst üste binmeye başlar.
+</p>
+
+<p>
+Ses hızını aştığında ise şok dalgaları oluşur.
+</p>
+
+<div class="formula">
+Mach = v_kaynak / v_ses
+</div>
+
+<img src="images/sok-dalgasi.gif">
+
+<p>
+Mach sayısı 1'den büyükse cisim ses hızını aşmıştır.
+</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+© Fizik Gösteri Deneyleri
+</div>
+
+</body>
+</html>
