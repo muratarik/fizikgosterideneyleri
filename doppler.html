@@ -3,106 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doppler Etkisi</title>
+<title>Pil Motoru</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-
 body {
   margin:0;
   font-family:'Inter',sans-serif;
   color:white;
-  background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364);
+  background:linear-gradient(-45deg,#1e3a8a,#0f172a,#312e81,#020617);
   background-size:400% 400%;
   animation:gradientMove 15s ease infinite;
 }
-
-@keyframes gradientMove {
-  0% { background-position:0% 50%; }
-  50% { background-position:100% 50%; }
-  100% { background-position:0% 50%; }
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
-
-nav {
+nav{
   display:flex;
   justify-content:center;
   gap:30px;
   padding:15px;
-  background:rgba(0,0,0,0.4);
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
 }
-
-nav a {
+nav a{
   color:white;
   text-decoration:none;
+  opacity:0.8;
 }
-
-.hero {
+nav a:hover{opacity:1;}
+.breadcrumb{
+  max-width:1000px;
+  margin:25px auto 0;
+  padding:0 20px;
+  font-size:14px;
+  opacity:0.7;
+}
+.breadcrumb a{
+  color:#a5b4fc;
+  text-decoration:none;
+}
+.hero{
   text-align:center;
-  padding:40px;
+  padding:40px 20px;
 }
-
-.hero h1 {
-  font-size:40px;
-  background:linear-gradient(90deg,#22c1c3,#fdbb2d);
+.hero h1{
+  font-size:42px;
+  font-weight:800;
+  background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-
-.container {
+.container{
   max-width:1000px;
   margin:auto;
   padding:20px;
 }
-
-.card {
-  background:rgba(255,255,255,0.08);
+.card{
+  background:rgba(255,255,255,0.06);
   padding:25px;
   border-radius:20px;
   margin-bottom:25px;
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s ease;
 }
-
-h3 { color:#67e8f9; }
-
-p { line-height:1.8; }
-
-img {
+.card:hover{
+  border:1px solid #a855f7;
+  box-shadow:0 0 25px rgba(168,85,247,0.4);
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+@media(max-width:768px){
+  .grid-2{grid-template-columns:1fr;}
+}
+h3{color:#a5b4fc;}
+h4{color:#a5b4fc;}
+p,li{
+  line-height:1.6;
+  opacity:0.9;
+}
+img{
   max-width:100%;
-  border-radius:10px;
+  border-radius:12px;
   margin-top:10px;
 }
-
-.formula {
-  background:rgba(0,0,0,0.4);
-  padding:15px;
-  border-radius:10px;
-  margin-top:10px;
-  font-family:monospace;
-  font-size:18px;
-}
-
-.footer {
+.footer{
   text-align:center;
   padding:40px;
   opacity:0.6;
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-<a href="index.html">Ana Sayfa</a>
-<a href="dalgalar.html">Dalgalar & Ses</a>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="dalgalar.html">Dalgalar & Ses</a>
 </nav>
 
 <div class="breadcrumb">
   <a href="index.html">Kategoriler</a> /
-  <a href="elektrik.html">Elektrik ve Manyetizma</a> /
-  Pil Motoru
+  <a href="dalgalar.html">Dalgalar & Ses</a> /
+  Doppler Etkisi
 </div>
-
 
 
 <div class="hero">
@@ -127,7 +138,9 @@ Doppler olayının anlaşılması ve hareketli kaynak ile gözlemci durumunda fr
 <div class="card">
 <h3>🧪 Deneyin Yapılışı</h3>
 <p>
-Buzzer elde tutulur ve ileri-geri hareket ettirilir. Dinleyici, sesin yaklaşıldığında tizleştiğini, uzaklaşıldığında ise pesleştiğini gözlemler.
+Buzzer elde tutulur ve ileri-geri hareket ettirilir. Dinleyici, sesin yaklaşıldığında tizleştiğini, 
+uzaklaşıldığında ise pesleştiğini gözlemler. 
+Ya da bir ipin ucuna bağlanır ve kafanın üzerinde daıresel hareket yapılırç
 </p>
 </div>
 
@@ -259,7 +272,7 @@ Mach sayısı 1'den büyükse cisim ses hızını aşmıştır.
 <h3>🎬 Deney Videosu</h3>
 
 <a href="https://www.youtube.com/watch?v=3PJri34bKZU" target="_blank">
-<img src="https://img.youtube.com/vi/3PJri34bKZU/hqdefault.jpg">
+<img src="https://img.youtube.com/vi/3PJri34bKZU/hqdefault.jpg"style="width:100%; border-radius:15px;">
 </a>
 
 <p style="margin-top:10px;opacity:0.7;">
